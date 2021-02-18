@@ -9,7 +9,6 @@ class Solution:
                 ans = s[j:i+1]
                 l1 = len(ans)
                 l2 = len(set(ans))
-                print(ans,l1,l2)
                 if l1==l2:
                     r = max(r,l1)
                     break
