@@ -3,10 +3,10 @@ class Solution {
         int ans[][] = new int[s.length()][s.length()];
         int start = 0;
         int maxLength = 1;
-        for(int i = 0,j = 0;i<ans.length;i++,j++){
-            if (i==j){
-                ans[i][j] = 1;
-            }
+        for(int i = 0;i<ans.length;i++){
+            
+                ans[i][i] = 1;
+            
         }
         for (int i = 0; i < s.length() - 1; ++i) {            
             if (s.charAt(i) == s.charAt(i + 1)) {
