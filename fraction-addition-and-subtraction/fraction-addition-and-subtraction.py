@@ -4,16 +4,9 @@ class Solution:
     def fractionAddition(self, expression: str) -> str:
         sign = 1
         n = len(expression)
+        div = False
         numerator = []
         denominator = []
-        def find_gcd(x, y): 
-            while(y): 
-                x, y = y, x % y 
-            return x 
-        prev = 0
-        gcd = 1
-        index = -1
-        div = False
         val = ""
         for i in range(n):
             if expression[i] == "-":
@@ -32,7 +25,6 @@ class Solution:
                 div = True
             else:
                 val+=expression[i]
-            print(val)
         denominator.append(int(val))
         x=0
         y=1
